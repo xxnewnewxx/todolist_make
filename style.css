@@ -1,41 +1,133 @@
 body {
+  font-family: "GmarketSansMedium";
   margin: 0;
-  background-image: url(images/background.jpg);
-  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, #f3afde 0%, #ff8ee5 100%);
   background-size: cover;
 }
-
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 5rem;
+}
 .container {
-  background-color: pink;
+  background: #fff;
   min-height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 50px;
 }
-.task-area {
-  border: 1px solid gray;
-  margin-top: 2em;
-}
-
-.task-tabs {
+.inputArea {
+  text-align: center;
   display: flex;
-  border-bottom: 1px solid gray;
+  justify-content: space-between;
+  border: 5px solid #f25ddc;
+
+  overflow: hidden;
+  margin: 40px 0;
+}
+.inputArea input {
+  background: none;
+  width: 80%;
+  border: none;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.inputArea button {
+  width: 30%;
+  border: none;
+  background: #f25ddc;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.inputArea button:hover {
+  color: #10595d;
+}
+/* input:focus {
+  outline: none;
+  background: none;
+} */
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-transition: background-color 9999s ease-out;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+} */
+.taskArea {
+  margin: 20px 0;
+}
+.taskTab {
+  width: 100%;
+  display: flex;
   position: relative;
+  overflow: hidden;
 }
+.taskTab div {
+  width: 100px;
+  text-align: center;
+  padding: 1rem;
 
-.task-tabs div {
-  padding: 1em;
+  background: #8cc1ef;
+  color: #fff;
+  cursor: pointer;
 }
-
-#under-line {
-  height: 4px;
-  background-color: hotpink;
+#underLine {
   position: absolute;
-  width: 53px;
-  left: 0px;
-  top: 52px;
-  padding: 0px;
+  width: 100px;
+  left: 0;
+  top: 50px;
+  padding: 0;
+  z-index: 2;
+  border-radius: 0;
+  border-bottom: 4px solid #f852c3;
 }
+.taskBoard {
+  background: #8cc1ef;
+  padding: 50px;
 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 .task {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  padding: 1rem 2rem;
+  align-items: center;
+  margin-bottom: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease-out;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+.task:hover {
+  border-radius: 50px;
+}
+.task.inactive {
+  background: rgba(255, 255, 255, 0.7);
+}
+.task.inactive:hover {
+  border-radius: 10px;
+}
+.task.inactive button {
+  background: #efed7b;
+}
+.taskDone {
+  text-decoration: line-through;
+  color: #efed7b;
+}
+.task button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s ease-out;
+  background: #ff6b9d;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.task button:hover {
+  background: #e6ff57;
+}
+.task button i {
+  vertical-align: middle;
 }
