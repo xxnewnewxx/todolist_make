@@ -39,21 +39,10 @@ h1 {
   font-size: 1.5rem;
   color: #fff;
 }
-.inputArea button:hover {
+/* .inputArea button:hover {
   color: #10595d;
-}
-/* input:focus {
-  outline: none;
-  background: none;
 } */
-/* input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  transition: background-color 5000s ease-in-out 0s;
-  -webkit-transition: background-color 9999s ease-out;
-  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-} */
+
 .taskArea {
   margin: 20px 0;
 }
@@ -78,7 +67,7 @@ input:-webkit-autofill:active {
   left: 0;
   top: 50px;
   padding: 0;
-  z-index: 2;
+  /* z-index: 2; */
   border-radius: 0;
   border-bottom: 4px solid #f852c3;
 }
@@ -95,39 +84,23 @@ input:-webkit-autofill:active {
   align-items: center;
   margin-bottom: 5px;
   background: #fff;
-  border-radius: 10px;
+
   transition: all 0.3s ease-out;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
-    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
-.task:hover {
-  border-radius: 50px;
-}
+
 .task.inactive {
   background: rgba(255, 255, 255, 0.7);
 }
-.task.inactive:hover {
-  border-radius: 10px;
-}
-.task.inactive button {
-  background: #efed7b;
-}
-.taskDone {
-  text-decoration: line-through;
-  color: #efed7b;
-}
+
 .task button {
   border: none;
   width: 40px;
   height: 40px;
-  transition: all 0.2s ease-out;
   background: #ff6b9d;
   color: #fff;
   font-size: 1.2rem;
 }
-.task button:hover {
-  background: #e6ff57;
-}
+
 .task button i {
   vertical-align: middle;
 }

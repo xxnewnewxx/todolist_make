@@ -25,10 +25,6 @@ function inputReset() {
 }
 
 function addTask() {
-  //console.log("click")
-  //버튼을 클릭하고 난 후 할일들~
-  //객체로 정의
-  //값을 입력하지 않았을경우???
   let taskValue = taskInput.value;
   if (taskValue == "") {
     alert("값이 입력되지 않았습니다.");
@@ -74,8 +70,8 @@ function togglecomplete(id) {
   //console.log("id:", id);
   for (let i = 0; i < taskList.length; i++) {
     if (taskList[i].id == id) {
-      taskList[i].isComplet = !taskList[i].isComplet; //토글같다!!!
-      break; //종료
+      taskList[i].isComplet = !taskList[i].isComplet;
+      break;
     }
   }
   render();
@@ -90,12 +86,10 @@ function deleteTask(id) {
       break;
     }
   }
-  //console.log(taskList);
-  //값을 업데이트하면 UI도 업데이트 해준다
+
   render();
 }
 
-// 랜덤 아이디
 function randomIDGenerate() {
   return "_" + Math.random().toString(36).substr(2, 9);
 }
