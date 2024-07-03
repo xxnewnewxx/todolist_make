@@ -88,9 +88,9 @@ h1 {
   transition: all 0.3s ease-out;
 }
 
-.task.inactive {
+/* .task.inactive {
   background: rgba(255, 255, 255, 0.7);
-}
+} */
 
 .task button {
   border: none;
