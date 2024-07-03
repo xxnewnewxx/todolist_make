@@ -88,10 +88,6 @@ h1 {
   transition: all 0.3s ease-out;
 }
 
-/* .task.inactive {
-  background: rgba(255, 255, 255, 0.7);
-} */
-
 .task button {
   border: none;
   width: 40px;
@@ -103,4 +99,17 @@ h1 {
 
 .task button i {
   vertical-align: middle;
+}
+
+.task.inactive {
+  background: rgba(58, 58, 58, 0.7);
+}
+
+.task.inactive:hover {
+  border-radius: 10px;
+}
+
+.taskDone {
+  text-decoration: line-through;
+  color: #070707;
 }
